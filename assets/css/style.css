@@ -1,0 +1,1650 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+/**  
+* -----------------------------------------------------------------------------
+*
+* Template :Evenio - Events & Conference HTML Template
+* Author : reacthemes
+* Author URI : http://www.reactheme.com/ 
+* Version: 1.0
+*
+* -----------------------------------------------------------------------------   
+    TABLE OF CONTENT
+-------------------------------------------------------------------------------
+    01. Preloader CSS
+
+-------------------------------------------------------------------------------*/
+
+:root{
+    --p-Pink: #c61dd1;
+    --p--pColor: #787895;
+    --p-cColor: #ccc;
+    --p--tColor: #fff;
+    --p--blackColor: #000;
+    --p-bgColor: #20203e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Mulish', sans-serif;
+}
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style: none;
+}
+
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* ========================== Preloader CSS start here ==================== */
+
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--p-bgColor);
+    overflow: hidden; 
+}
+.preloader .preloader-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+}
+.preloader .preloader-inner .preloader-icon {
+    width: 72px;
+    height: 72px;
+    display: inline-block;
+    padding: 0px; 
+}
+.preloader .preloader-inner .preloader-icon span {
+    position: absolute;
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    border-radius: 100%;
+    background: var(--p--tColor);
+    -webkit-animation: preloader-fx 1.6s linear infinite;
+    animation: preloader-fx 1.6s linear infinite;
+ }
+.preloader .preloader-inner .preloader-icon span:last-child {
+    animation-delay: -0.8s;
+    -webkit-animation-delay: -0.8s; 
+}
+  
+@keyframes preloader-fx {
+    0% {
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+        opacity: 0.5; }
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 0; } }
+    @-webkit-keyframes preloader-fx {
+    0% {
+        -webkit-transform: scale(0, 0);
+        opacity: 0.5; }
+    100% {
+        -webkit-transform: scale(1, 1);
+        opacity: 0; 
+    } 
+}
+/* ========================== Preloader CSS end here ==================== */
+
+/* =============scroll button start =============== */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--p-Pink);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .scroll-up-btn:hover{
+    filter: brightness(90%);
+  }
+  /* =============scroll button end=============== */
+
+
+  /* =============header section start here========== */
+  .header__section{
+    padding: 20px 0;
+  }
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__main ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__main {
+    width: 44%;
+}
+
+.header__right ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__right.header__list {
+    width: 24%;
+}
+
+.header__main ul li a,
+ .header__right ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--p--blackColor)
+}
+
+.header__right ul li a{
+    color: var(--p-Pink);
+}
+
+.header__right ul li:nth-child(3) a {
+    padding: 10px 44px;
+    background: transparent;
+    border: 1px solid var(--p-Pink);
+}
+
+.mobile__icon{
+    display: none;
+}
+
+.open{
+    display: block;
+}
+
+ svg.svg-inline--fa.fa-bars {
+    font-size: 22px;
+}
+
+.mobile__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    height: 100%;
+    width: 40%;
+    padding: 25px 40px;
+    z-index: 999;
+    background-color: #333;
+}
+
+.open{
+    transform: scaleX(1);
+}
+
+.cross__btn {
+    text-align: right;
+}
+
+.cross__btn svg.svg-inline--fa.fa-xmark {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mobile__menu > ul > li {
+    padding: 16px 0;
+    border-bottom: 1px solid darkgray;
+}
+
+.mobile__menu ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header__right.header__mobile{
+    margin-top: 10px;
+}
+
+.header__right.header__mobile .common__btn a{
+    border: 1px solid darkgray;
+}
+
+.common__btn.banner__btn a:last-child {
+    padding: 7px 30px;
+    background-color: transparent;
+    color: #000;
+}
+
+@media screen and (max-width: 991px) {
+    .mobile__icon{
+        display: block;
+    }
+
+    .header__main, .header__list{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile__menu {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .mobile__menu {
+        width: 100%;
+    }
+}
+  /* =============header section end here========== */
+
+
+  /* =============banner section start here========== */
+.banner__section{
+    padding-top: 100px;
+}
+
+.banner__content h1 {
+    font-size: 82px;
+    line-height: 109px;
+}
+
+.banner__content h1 span{
+    color: var(--p-Pink);
+}
+
+.image__sec {
+    position: relative;
+}
+
+.image__sec .image__clip {
+    height: 221px;
+    width: 471PX;
+    background-color: #26244d;
+    -webkit-clip-path: polygon(83% 0, 100% 31%, 100% 100%, 0 100%, 0 0);
+    position: absolute;
+    padding: 20px;
+    bottom: -26%;
+    left: 23%;
+    display: flex;
+    justify-content: start;
+    color: var(--p--tColor);
+}
+
+.clip__left .clip__profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.clip__left .clip__profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 17px 0 30px;
+}
+
+.clip__left .clip__profile p {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.clip__left span {
+    color: #fff;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.clip__left h5 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.image__clip .clip__left {
+    margin-right: 35px;
+}
+
+.clip__right p {
+    font-size: 18px;
+}
+
+.clip__right .clip__duration {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0;
+}
+
+.clip__right .clip__duration h4 {
+    font-weight: bold;
+    font-size: 27px;
+    margin: 0;
+}
+
+
+.clip__right a {
+    font-size: 22px;
+    color: #fff;
+    padding: 15px 33px;
+    background: var(--p-Pink);
+}
+
+.banner__content p {
+    font-size: 26px;
+    margin: 25px 0 20px;
+}
+
+.banner__btn a span {
+    height: 50px;
+    width: 50px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.common__btn.banner__btn {
+    text-align: left;
+}
+
+.count__down {
+    max-width: 544px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--p--pColor);
+    margin-top: 100px;
+}
+
+.count__down h4 {
+    height: 55px;
+    width: 1px;
+    background-color: lightgrey;
+}
+
+.count__down .count__1 h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.count__down .count__1 h3 span {
+    color: #f114ff;
+    position: relative;
+}
+
+.count__down .count__1 h3 span::after {
+    position: absolute;
+    content: "\2b";
+    top: -4px;
+    right: -8px;
+    font-size: 20px;
+}
+
+.count__down .count__1 p {
+    font-size: 17px;
+    font-weight: bold;
+    color: lightgrey;
+}
+
+@media screen and (max-width: 1399px) {
+    .banner__content h1 {
+        font-size: 59px;
+        line-height: 86px;
+    }
+
+    .image__sec .image__clip{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .banner__content p {
+        font-size: 23px;
+        margin: 25px 0 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .banner__content h1 {
+        font-size: 43px;
+        line-height: 70px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .count__down{
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .count__down .count__1 h3 {
+        font-size: 25px;
+    }
+
+    .count__down .count__1 p {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 452px) {
+    .common__btn.banner__btn {
+        text-align: center;
+    }
+
+    .common__btn.banner__btn a:last-child {
+        margin-top: 13px;
+    } 
+}
+
+@media screen and (max-width: 424px) {
+    .banner__content h1 {
+        font-size: 32px;
+        line-height: 60px;
+    }
+
+    .banner__content p {
+        font-size: 17px;
+        margin: 15px 0;
+    }
+
+    .count__down .count__1 p {
+        font-size: 10px;
+    }
+
+    .count__down .count__1 h3 {
+        font-size: 20px;
+    }
+}
+
+  /* =============banner section end here========== */
+
+
+
+/* ========================== Partner Section CSS start here ==================== */
+.partner__section{
+    padding: 100px 0;
+}
+
+.client__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.common__title{
+    text-align: center;
+}
+
+.common__title span {
+    font-size: 24px;
+    color: var(--p-Pink);
+}
+
+.common__title h2 {
+    font-size: 67px;
+    font-weight: bold;
+    margin: 24px 0 48px;
+}
+
+/* -----live slide start----- */
+.live__auction {
+    padding: 20px;
+    background-color: var(--p-bgColor);
+    max-width: 100%;
+}
+
+.live__auction .author__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live__auction .author__box svg.svg-inline--fa.fa-ellipsis {
+    font-size: 24px;
+}
+
+.live__auction .author__box .author {
+    display: flex;
+    align-items: center;
+}
+
+.live__auction .author__box .author .name {
+    margin-left: 15px;
+}
+
+.live__auction .author__box .author .name p {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.live__auction .author__box .author .name span {
+    font-size: 18px;
+}
+.live__auction .author__view {
+    margin: 15px 0;
+}
+
+.live__auction .author__view img {
+    width: 100%;
+}
+
+.live__auction .author__review .stars p {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.live__auction .author__review .stars .rating {
+    font-size: 18px;
+    color: #f1c337;
+    text-align: left;
+}
+
+.live__auction .author__review {
+    border-bottom: 1px solid #80808038;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live__auction .author__review .duration span {
+    font-size: 18px;
+}
+
+
+  .live__auction .author__box .author .name span,
+   .live__auction .author__review .duration span,
+    .live__auction .author__bid .bid span{
+     color: var(--p--pColor);
+}
+
+.live__auction .author__review .duration p {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 11px;
+}
+
+.live__auction .author__bid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+}
+
+.live__auction .author__bid .bid span {
+    font-size: 18px;
+}
+
+.live__auction .author__bid .bid p {
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.live__auction .author__box svg.svg-inline--fa.fa-ellipsis,
+ .live__auction .author__box .author .name p,
+  .live__auction .author__review .stars p,
+   .live__auction .author__bid .bid p,
+    .live__auction .author__review .duration p,
+     .author__bid .bid__click a{
+      color: var(--p--tColor);
+}
+
+.author__bid .bid__click a {
+    font-size: 20px;
+    padding: 15px 22px;
+    background-color: var(--p-Pink);
+    display: inline-block;
+}
+/* -----live slide end----- */
+
+/* -----swiper slider css start----- */
+.swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  /* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+/* -----swiper slider css end----- */
+
+@media screen and (max-width: 1199px) {
+    .live__auction .author__review .stars p {
+        font-size: 19px;
+        margin-bottom: 5px;
+    }
+
+    .live__auction .author__review .duration span,
+     .live__auction .author__bid .bid span {
+        font-size: 14px;
+    }
+
+    .live__auction .author__review .duration p,
+     .live__auction .author__bid .bid p {
+        font-size: 19px;
+        margin-top: 5px;
+    }
+
+    .author__bid .bid__click a {
+        font-size: 16px;
+        padding: 9px 16px;
+        background-color: var(--p-Pink);
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+    .client__section{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .client__section img{
+        margin-bottom: 23px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 424px) {
+    .common__title span {
+        font-size: 20px;
+    }
+
+    .common__title h2 {
+        font-size: 42px;
+        margin: 8px 0 30px;
+    }
+
+    .live__auction .author__review .duration p,
+     .live__auction .author__bid .bid p,
+      .live__auction .author__review .stars p,
+       .live__auction .author__box .author .name p {
+        font-size: 16px;
+        
+    }
+    
+    .live__auction .author__review .stars .rating,
+     .live__auction .author__box .author .name span {
+        font-size: 14px;
+    }
+
+    .live__auction .author__box svg.svg-inline--fa.fa-ellipsis {
+        font-size: 20px;
+    }
+
+}
+/* ========================== Partner Section CSS end here ==================== */
+
+
+/* ========================== How to section CSS start here ======================*/
+.how__to {
+    padding: 100px 0;
+}
+
+.sell__box {
+    text-align: left;
+}
+
+.sell__category {
+    margin: 55px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sell__box {
+    max-width: 288px;
+}
+
+.sell__box span {
+    display: block;
+    font-size: 29px;
+    margin: 40px 0 20px;
+    font-weight: bold;
+}
+
+.sell__box p{
+    font-size: 22px;
+}
+
+.common__btn {
+    text-align: center;
+}
+
+/* .common__btn a {
+    padding: 22px 52px;
+    background-color: #c61dd1;
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+} */
+
+.common__btn a {
+    padding: 16px 48px;
+    background-color: var(--p-Pink);
+    color: var(--p--tColor);
+    font-size: 22px;
+    display: inline-block;
+}
+
+.explore__content .common__btn {
+    text-align: left;
+    margin-top: 34px;
+}
+
+@media screen and (max-width: 1199px) {
+    .sell__category{
+        flex-wrap: wrap;
+    }
+
+    .sell__box{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .sell__box {
+        text-align: center;
+    }
+
+    .sell__category{
+        justify-content: center;
+    }
+
+    .common__btn a{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .common__btn a{
+        padding: 15px 45px;
+    }
+
+    .sell__box span {
+        font-size: 27px;
+        margin: 30px 0 20px;
+    }
+
+    .sell__box p {
+        font-size: 19px;
+    }
+}
+/* ========================= How to section CSS end here ======================*/
+
+
+
+/* ========================= Explore section CSS start here ======================*/
+.explore__content p {
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.explore__content .common__title {
+    text-align: left;
+}
+
+.explore__content .common__btn {
+    text-align: left;
+}
+
+@media screen and (max-width: 1199px) {
+    .common__title h2 {
+        font-size: 49px;
+        font-weight: bold;
+        margin: 24px 0 36px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    
+    .common__title h2 {
+        font-size: 36px;
+        margin: 20px 0 30px;
+    }
+
+    .explore__content p {
+        font-size: 20px;
+        line-height: 31px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .explore__inner .row{
+        flex-wrap: wrap-reverse;
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    .explore__content .common__title,
+     .explore__content .common__btn {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .common__title h2 {
+        font-size: 32px;
+    }
+
+    .explore__content p {
+        font-size: 17px;
+    }
+}
+
+/* ========================== Explore section CSS end here ======================*/
+
+
+/* ========================= digital product section css start here================= */
+.digital__product{
+    padding: 100px 0;
+}
+
+/* ---tab--- */
+[data-tab-content] {
+    display: none;
+  }
+  
+  .active[data-tab-content] {
+    display: block;
+  }
+  
+  /* body {
+    padding: 0;
+    margin: 0;
+  } */
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 41px 0 35px;
+    padding: 0;
+    /* border-bottom: 1px solid black; */
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 18px 25px;
+    font-size: 21px;
+    margin-right: 20px;
+    color: var(--p--tColor);
+    background-color: var(--p-bgColor);
+}
+  
+  .tab.active {
+    background-color: var(--p-Pink);
+  }
+  
+  /* .tab:hover {
+    background-color: #AAA;
+  } */
+  
+  /* .tab-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  } */
+/* ---tab--- */
+
+.tab__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab__box .live__auction {
+    margin:0 20px 20px 0;
+    max-width: 328px;
+}
+
+.live__auction .author__box a {
+    padding: 5px;
+    color: #fff;
+    background-color: #252572;
+}
+
+.tab__box .live__auction .author__box .author .name p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tab__box .live__auction .author__box .author .name {
+    margin-left: 6px;
+}
+
+.tab__box .bid {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 35px;
+}
+
+.tab__box .live__auction .author__review .stars p {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.tab__box .live__auction .author__box a svg.svg-inline--fa.fa-heart {
+    color: var(--p-Pink);
+}
+
+@media screen and (max-width: 991px) {
+    .tab__box {
+        flex-wrap: wrap;
+    }
+
+    .tab__box .live__auction{
+        margin: 0 0 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .tab__box {
+        justify-content: center;
+    }
+
+    .tab {
+        padding: 14px 21px;
+        font-size: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .tabs{
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        padding: 9px 15px;
+        font-size: 12px;
+        margin-right: 8px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* isotop */
+.grid {
+    /* width: 100%;
+    max-width: 1100px;
+    margin: auto; */
+  }
+  .button-group {
+    margin: 80px auto;
+    display: table;
+  }
+  .button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    background-color: #eee;
+    margin: 0 3px;
+  }
+  .button:hover {
+    background-color: var(--p-cColor);
+    color: var(--p--tColor);
+  }
+  .button.is-checked {
+    background: green;
+    color: var(--p--tColor);
+  }
+  .element-item {
+    background-color: var(--p--tColor);
+    padding: 0;
+    /* margin: 10px;
+    width: calc(33% - 20px); */
+    display: inline-block;
+  }
+  .item-image {
+    width: 100%;
+    padding-bottom: 50%;
+    background-size: cover;
+  }
+  .item-title {
+    margin: 0;
+    padding: 10px;
+    height: 40px;
+    overflow: hidden;
+  }
+  
+  /* end gallery style */
+  /* body {
+    background-color: #1d1e22
+  } */
+/* isotop */
+/* ========================= digital product section css end here================= */
+
+
+/* ========================= top seller section css start here================= */
+.top__seller{
+    padding: 100px 0;
+}
+
+/* ---slider--- */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+/* ---slider--- */
+
+.seller__box{
+    background-color: var(--p-bgColor);
+    width: 100%;
+}
+
+.seller__box .seller__bg img:nth-child(2) {
+    width: 90px;
+    margin: -42px auto 0;
+}
+
+.seller__box .seller__content {
+    padding: 20px 0;
+}
+
+.seller__box .seller__content p{
+    color: var(--p--tColor);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.seller__box .seller__content span{
+    color: var(--p-cColor);
+    font-size: 16px;
+}
+
+
+/* ========================= top seller section css end here================= */
+
+
+/* ========================= art section section css start here================= */
+.art__section{
+    padding: 100px 0;
+}
+
+.art__title.common__title h2 {
+    margin: 24px 0;
+}
+
+.art__btn.common__btn a:nth-child(1) {
+    margin-right: 20px;
+}
+
+.art__btn.common__btn {
+    margin-top: 20px;
+}
+
+.art__btn.common__btn a:last-child{
+    background-color: var(--p-bgColor);
+}
+
+.art__title.common__title {
+    max-width: 764px;
+    margin: auto;
+}
+
+.art__title.common__title p {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 767px) {
+    .art__title.common__title p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .art__btn.common__btn a:nth-child(1) {
+        margin:0 0 20px;
+    }
+}
+
+
+/* ========================= art section section css end here================= */
+
+
+/* ======================== testimonial section start here================= */
+
+.testimonial__section{
+    padding: 100px 0;
+}
+
+.testimonial__box {
+    max-width: 638px;
+    padding: 32px;
+    background-color: var(--p-bgColor);
+}
+
+.testi__img img {
+    width: 60px;
+}
+
+.testi__content p {
+    font-size: 22px;
+    text-align: left;
+    padding: 25px 0 20px;
+    color: var(--p--tColor);
+}
+
+
+.testi__client {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.testi__client img {
+    width: 90px;
+}
+
+.testi__client .client__info p {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.testi__client .client__info span {
+    color: var(--p-cColor);
+}
+
+.testi__client .client__info {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .testimonial__box {
+        padding: 18px;
+    }
+
+    .testi__content p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .testi__client .client__info {
+        margin-left: 15px;
+    }
+
+    .testi__client .client__info p {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .testi__client .client__info span {
+        font-size: 13px;
+        color: var(--p-cColor);
+    }
+}
+
+/* ======================== testimonial section end here================= */
+
+
+/* ======================== update__section start here================= */
+.update__inner{
+    background-color: var(--p-Pink);
+    padding: 50px;
+}
+
+.update__title.common__title {
+    color: var(--p--tColor);
+}
+
+.update__title.common__title span {
+    color: var(--p--tColor);
+}
+
+.update__inner form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update__inner form input {
+    width: 76%;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    color: var(--p--pColor)
+}
+
+.common__btn.update__btn {
+    border: 1px solid var(--p--tColor);
+}
+
+@media screen and (max-width: 1199px) {
+    .common__btn.update__btn{
+        width: 24%;
+        font-size: 18;
+    }
+
+    .common__btn.update__btn a{
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .update__inner form input{
+        width: 70%;
+    }
+
+    .common__btn.update__btn{
+        width: 30%;
+    }
+
+    .common__btn.update__btn a {
+        font-size: 15px;
+        padding: 18px 48px;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .update__inner form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .update__inner form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .common__btn.update__btn {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .update__inner {
+        padding: 30px 20px;
+    }
+    
+    .common__title h2 {
+        font-size: 32px;
+        margin: 10px 0 30px;
+    }
+
+    .update__inner form input {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .common__btn.update__btn {
+        width: 60%;
+    }
+
+    .common__btn.update__btn a {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+
+/* ======================== update__section end here================= */
+
+
+/* ======================== update__section start here================= */
+.footer__list{
+    padding: 100px 0;
+}
+
+.list__title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.ft__list {
+    padding: 0 30px 30px;
+}
+
+.list__title h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.ft__list span {
+    font-size: 20px;
+    line-height: 35px;
+    padding: 20px 0;
+    display: block;
+    color: var(--p--pColor);
+}
+
+.ft__list .social__links a {
+    font-size: 18px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--p--pColor);
+    color: var(--p--tColor);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.ft__list .social__links a:hover{
+    background-color: var(--p-Pink);
+}
+
+.ft__list__ul p {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 29px;
+}
+
+.ft__list__ul ul{
+    margin-left: 16px;
+}
+
+.ft__list__ul li{
+    line-height: 35px;
+}
+
+.list__style__li li::before {
+    content: "\2022";
+    color: var(--p-Pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.ft__list__ul ul li a {
+    font-size: 20px;
+    color: var(--p--pColor);
+}
+
+.ft__list__ul.contact__list ul li::before{
+    color: var(--p-Pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+}
+
+.ft__list__ul.contact__list ul li:nth-child(1)::before{
+    content: "\f095";
+    
+
+}
+
+.ft__list__ul.contact__list ul li:nth-child(2)::before{
+    content: "\f0e0";
+}
+
+.ft__list__ul.contact__list ul li:nth-child(3)::before{
+    content: "\f3c5";
+}
+
+/* ---copyright--- */
+.copyright {
+    padding: 20px 0;
+    border-top: 1px solid darkgray;
+}
+
+.copyright p {
+    text-align: center;
+    font-weight: bold;
+}
+/* ---copytight--- */
+
+@media screen and (max-width: 767px) {
+    .ft__list {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .ft__list__ul.ft__list__ul.contact__list ul{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .ft__list span {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .ft__list__ul p {
+        font-size: 27px;
+        margin-bottom: 13px;
+    }
+
+    .ft__list__ul li {
+        line-height: 30px;
+    }
+
+    .ft__list__ul ul li a {
+        font-size: 17px;
+    }
+    
+}
+/* ======================== update__section end here================= */
+
+
+
+
+
+/* =======================================
+            about page start here
+=========================================*/
+
+/* =====about section start here===== */
+
+.about__section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__inner {
+    text-align: center;
+}
+
+.about__inner h1 {
+    font-size: 66px;
+    margin-bottom: 30px;
+}
+
+.about__inner .about__btn {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 991px) {
+    .about__inner h1 {
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+}
+
+.about__inner h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* =====about section end here===== */
+
+/* =====play section start here===== */
+.play__section {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play__inner {
+    position: relative;
+    max-height: 533px;
+    max-width: 943px;
+}
+
+.play__inner img:first-child {
+    width: 100%;
+}
+
+.play__inner img:last-child {
+    position: absolute;
+    max-width: 115px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* =====play section end here===== */
+
+.member__box {
+    width: 100%;
+    padding: 24px;
+    background-color: var(--p-bgColor);
+}
+
+.member__box img{
+    width: 196px;
+    margin: auto;
+}
+
+.member__box p {
+    font-size: 22px;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    color: var(--p--tColor);
+}
+
+.member__box span {
+    font-size: 20px;
+    margin-bottom: 8px;
+    display: inline-block;
+    color: var(--p--pColor);
+}
+
+.member__box .member__social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.member__box .member__social a {
+    background-color: gray;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #fff;
+}
+/* =======================================
+            about page start here
+=========================================*/
+
+
+
